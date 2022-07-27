@@ -18,7 +18,7 @@ class SearchService {
                 switch data.result {
                     case .success(_):
                         guard let character = data.value else {return}
-                    success(character.results, character.info)
+                        success(character.results, character.info)
                     case .failure(let error):
                         failure(NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey : error.localizedDescription]))
                 }

@@ -13,11 +13,6 @@ class CharacterTableViewCell: UITableViewCell {
     @IBOutlet weak var characterImageView: UIImageView!
     @IBOutlet weak var characterName: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-    }
-    
     func refresh(characterRaM: RaMCharacter) {
         characterName.text = characterRaM.name
         if let url = URL(string: characterRaM.image) {
